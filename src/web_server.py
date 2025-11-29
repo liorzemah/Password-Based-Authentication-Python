@@ -7,23 +7,27 @@ import pyotp
 import secrets
 import os
 import time
+from datetime import datetime
 
 
 app = Flask(__name__)
 
-# basic config
-GROUP_SEED = "GROUP_SEED_SAMPLE"  # need to replace with our IDs
-ENABLE_PEPPER = os.environ.get("ENABLE_PEPPER", "true").lower() == "true"
-ENABLE_SALT = os.environ.get("ENABLE_SALT", "true").lower() == "true"
+GROUP_SEED = ""
+ENABLE_PEPPER = os.environ.get("ENABLE_PEPPER", "1").lower() in ("1", "true") 
 PEPPER = secrets.token_hex(16) if ENABLE_PEPPER else ""
-ENABLE_RATE_LIMITING = os.environ.get("ENABLE_RATE_LIMITING", "true").lower() == "true"
-ENABLE_LOCKOUT = os.environ.get("ENABLE_LOCKOUT", "true").lower() == "true"
-ENABLE_CAPTCHA = os.environ.get("ENABLE_CAPTCHA", "true").lower() == "true"
-ENABLE_TOTP = os.environ.get("ENABLE_TOTP", "true").lower() == "true"
+ENABLE_RATE_LIMITING = os.environ.get("ENABLE_RATE_LIMITING", "1").lower() in ("1", "true") 
+ENABLE_SALT = os.environ.get("ENABLE_SALT", "1").lower() in ("1", "true")
+ENABLE_LOCKOUT = os.environ.get("ENABLE_LOCKOUT", "1").lower() in ("1", "true") 
+ENABLE_CAPTCHA = os.environ.get("ENABLE_CAPTCHA", "1").lower() in ("1", "true") 
+ENABLE_TOTP = os.environ.get("ENABLE_TOTP", "1").lower() in ("1", "true")
+
+
+with open("data/users.json", "r") as seed_file:
+    GROUP_SEED = json.loads(seed_file.read())['group_seed']
 
 # runtime db - erased after server restart
 users = {}
-login_attempts = {}  # {username: [timestamps]}
+login_attempts = {}
 lockout_info = {}    # {username: {"count": int, "locked_until": float}}
 captcha_tokens = set()
 
@@ -32,7 +36,7 @@ RATE_LIMIT_WINDOW = 60  # in seconds
 RATE_LIMIT_MAX_ATTEMPTS = 5
 LOCKOUT_THRESHOLD = 5
 LOCKOUT_DURATION = 300  # in seconds
-ATTEMPTS_LOG_FILE = "attempts.log"
+ATTEMPTS_LOG_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "logs", "attempts.log"))
 
 argon_pass_hasher = PasswordHasher(time_cost=1, memory_cost=65536, parallelism=1)
 
@@ -52,7 +56,7 @@ def get_protection_flags(username):
 def log_attempt_json(username, hash_mode, result, start_time):
     latency = int((time.time() - start_time) * 1000)
     log_entry = {
-    "timestamp": int(time.time() * 1000),
+    "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     "group_seed": GROUP_SEED,
     "username": username,
     "hash_mode": hash_mode,
@@ -67,7 +71,7 @@ def hash_password_sha256(password, salt):
     return hashlib.sha256((password + salt + PEPPER).encode()).hexdigest()
 
 def hash_password_bcrypt(password):
-    salt = bcrypt.gensalt(rounds=12) if ENABLE_SALT else b''
+    salt = bcrypt.gensalt(rounds=12)
     return bcrypt.hashpw((password + PEPPER).encode(), salt).decode()
 
 def hash_password_argon2(password):

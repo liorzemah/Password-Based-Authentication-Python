@@ -1,9 +1,0 @@
-{"timestamp": 1764183363006, "group_seed": "GROUP_SEED_SAMPLE", "username": "lior2", "hash_mode": "unknown", "protection_flags": "111011", "result": "captcha_required", "latency_ms": 0}
-{"timestamp": 1764183672116, "group_seed": "GROUP_SEED_SAMPLE", "username": "test", "hash_mode": "sha256", "protection_flags": "111111", "result": "captcha_required", "latency_ms": 0}
-{"timestamp": 1764188029793, "group_seed": "GROUP_SEED_SAMPLE", "username": "test2", "hash_mode": "argon2", "protection_flags": "111111", "result": "totp_required", "latency_ms": 64}
-{"timestamp": 1764188102914, "group_seed": "GROUP_SEED_SAMPLE", "username": "test2", "hash_mode": "argon2", "protection_flags": "111111", "result": "captcha_required", "latency_ms": 0}
-{"timestamp": 1764188124262, "group_seed": "GROUP_SEED_SAMPLE", "username": "test2", "hash_mode": "argon2", "protection_flags": "111111", "result": "fail", "latency_ms": 73}
-{"timestamp": 1764188133610, "group_seed": "GROUP_SEED_SAMPLE", "username": "test2", "hash_mode": "argon2", "protection_flags": "111111", "result": "fail", "latency_ms": 62}
-{"timestamp": 1764188140803, "group_seed": "GROUP_SEED_SAMPLE", "username": "test2", "hash_mode": "argon2", "protection_flags": "111111", "result": "fail", "latency_ms": 63}
-{"timestamp": 1764188146747, "group_seed": "GROUP_SEED_SAMPLE", "username": "test2", "hash_mode": "argon2", "protection_flags": "111111", "result": "success", "latency_ms": 57}
-{"timestamp": 1764188174070, "group_seed": "GROUP_SEED_SAMPLE", "username": "test", "hash_mode": "unknown", "protection_flags": "111010", "result": "captcha_required", "latency_ms": 0}

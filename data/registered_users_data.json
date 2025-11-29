@@ -1,0 +1,215 @@
+{
+    "group_seed": "513626425",
+    "users": [
+        {
+            "username": "user_00",
+            "password": "123456",
+            "hash_mode": "sha256",
+            "strength": "weak",
+            "totp_secret": "OA7AWA2M6DVS42CMRM777QSNLYUGDGFE"
+        },
+        {
+            "username": "user_01",
+            "password": "password",
+            "hash_mode": "bcrypt",
+            "strength": "weak",
+            "totp_secret": "MPJLCJ2BWQU4KOAA7APAFYAHPNTWINTP"
+        },
+        {
+            "username": "user_02",
+            "password": "qwerty",
+            "hash_mode": "argon2",
+            "strength": "weak",
+            "totp_secret": "WK3VYUL7MNJ4BPV42I32VZ7E2ABA65WG"
+        },
+        {
+            "username": "user_03",
+            "password": "513626425",
+            "hash_mode": "sha256",
+            "strength": "weak",
+            "totp_secret": "DPDPFNIOP67H7CQWLYECSXJWIKXK3ZMZ"
+        },
+        {
+            "username": "user_04",
+            "password": "letmein",
+            "hash_mode": "bcrypt",
+            "strength": "weak",
+            "totp_secret": "PNFC5PCPUV4TRMRKZSWO7NTI7XOMF3C7"
+        },
+        {
+            "username": "user_05",
+            "password": "admin",
+            "hash_mode": "argon2",
+            "strength": "weak",
+            "totp_secret": "5YZZC2BG66GEZOWOCSEGYAF6J3E46KRE"
+        },
+        {
+            "username": "user_06",
+            "password": "welcome",
+            "hash_mode": "sha256",
+            "strength": "weak",
+            "totp_secret": "USIC3BWID2RPW4MXH4ATX7GUNWWJPEF2"
+        },
+        {
+            "username": "user_07",
+            "password": "iloveyou",
+            "hash_mode": "bcrypt",
+            "strength": "weak",
+            "totp_secret": "6AU57QQ6NEHAK56GEWU5J725OV3Q2JSN"
+        },
+        {
+            "username": "user_08",
+            "password": "abc123",
+            "hash_mode": "argon2",
+            "strength": "weak",
+            "totp_secret": "AETPJQ4DPSDTMK7JN2U577ZVE6DDL2UM"
+        },
+        {
+            "username": "user_09",
+            "password": "password1",
+            "hash_mode": "sha256",
+            "strength": "weak",
+            "totp_secret": "AULWYWWAHRYB5BJ6SD5LSYLSF5BRZJMK"
+        },
+        {
+            "username": "user_10",
+            "password": "Sunshine42",
+            "hash_mode": "bcrypt",
+            "strength": "medium",
+            "totp_secret": "TQVFQTCI4Y5Q4A4NBYS3LD4G5ORMVSJD"
+        },
+        {
+            "username": "user_11",
+            "password": "BlueCar77",
+            "hash_mode": "argon2",
+            "strength": "medium",
+            "totp_secret": "VQC5XDI2SIYCEBESB5GJUKGGVKPD2KSS"
+        },
+        {
+            "username": "user_12",
+            "password": "M1ddlePass",
+            "hash_mode": "sha256",
+            "strength": "medium",
+            "totp_secret": "7TWG2R5QAYLNSHQ6OUQDBS3KPJ7I4HXL"
+        },
+        {
+            "username": "user_13",
+            "password": "Hello2020",
+            "hash_mode": "bcrypt",
+            "strength": "medium",
+            "totp_secret": "3MCU5U4XGSOSSDVMPYR5VPZM2TFR2NWU"
+        },
+        {
+            "username": "user_14",
+            "password": "Coffee123",
+            "hash_mode": "argon2",
+            "strength": "medium",
+            "totp_secret": "HXWRZ5MQT53N7FUMMYSQVCBXWDRYXSYQ"
+        },
+        {
+            "username": "user_15",
+            "password": "Winter2021",
+            "hash_mode": "sha256",
+            "strength": "medium",
+            "totp_secret": "WHULCDA47PD6A5V6U7ENF3YLZNOV3O6R"
+        },
+        {
+            "username": "user_16",
+            "password": "GreenDog9",
+            "hash_mode": "bcrypt",
+            "strength": "medium",
+            "totp_secret": "CBAHPCPM2UZ3MEW4DA35CTSLAXAVZIB4"
+        },
+        {
+            "username": "user_17",
+            "password": "StarFish7",
+            "hash_mode": "argon2",
+            "strength": "medium",
+            "totp_secret": "C2UJMSLN3PKPTPWNHGGC2JRWEJMBTFLJ"
+        },
+        {
+            "username": "user_18",
+            "password": "MyPass2022",
+            "hash_mode": "sha256",
+            "strength": "medium",
+            "totp_secret": "JFZFIXNWXEEINFDGDZAOHNHWCDLH2A6D"
+        },
+        {
+            "username": "user_19",
+            "password": "LuckyDay8",
+            "hash_mode": "bcrypt",
+            "strength": "medium",
+            "totp_secret": "CVICSOTBVHFTG77N7PQY5LXLJG64PUNY"
+        },
+        {
+            "username": "user_20",
+            "password": "G7#kL9!xP4rV2sQ@",
+            "hash_mode": "argon2",
+            "strength": "strong",
+            "totp_secret": "QCHGE52P6WR25ZP3MIIOJKNK565QXGEP"
+        },
+        {
+            "username": "user_21",
+            "password": "aR3$k9*W8bZ6^mN%",
+            "hash_mode": "sha256",
+            "strength": "strong",
+            "totp_secret": "ZKCGFYBADFJGSLEBCZTLHQTOBD2EVHEX"
+        },
+        {
+            "username": "user_22",
+            "password": "Tz9&uY7@pL4#sD1!",
+            "hash_mode": "bcrypt",
+            "strength": "strong",
+            "totp_secret": "LDXKO7C6LLJNOIEF6ELSDFJDO6OCRP5W"
+        },
+        {
+            "username": "user_23",
+            "password": "x7V!pQ2#kL8^gR5$",
+            "hash_mode": "argon2",
+            "strength": "strong",
+            "totp_secret": "OHAWBDC3ZIBWQQEUUE6F5L3O2QC66Q4U"
+        },
+        {
+            "username": "user_24",
+            "password": "S9@bV6$kLp3#tR8!",
+            "hash_mode": "sha256",
+            "strength": "strong",
+            "totp_secret": "KKNLN534EXGWMSEAU7WCHD4AIVMPNU3Z"
+        },
+        {
+            "username": "user_25",
+            "password": "N#4vT8!pQ2@zY6^m",
+            "hash_mode": "bcrypt",
+            "strength": "strong",
+            "totp_secret": "2ZDWFD2UPUU76JJEQBZ4XVAGDWYMLUKH"
+        },
+        {
+            "username": "user_26",
+            "password": "pL8^rT5$kN3#vY9!s",
+            "hash_mode": "argon2",
+            "strength": "strong",
+            "totp_secret": "VTELO4CBYHS3CVAX7P74KPIG4XBOMOYO"
+        },
+        {
+            "username": "user_27",
+            "password": "Q1!wE2@rT3#yU4$",
+            "hash_mode": "sha256",
+            "strength": "strong",
+            "totp_secret": "HYG7KDSGG42BPRO2LCTVYMLSL6CXPQK2"
+        },
+        {
+            "username": "user_28",
+            "password": "ZxC!vB2@Nm3#kL4$",
+            "hash_mode": "bcrypt",
+            "strength": "strong",
+            "totp_secret": "2N6SJJQN5XJZ75KQRHAZPA7VVSE5ZHW5"
+        },
+        {
+            "username": "user_29",
+            "password": "H8&jK9#lP6!sD2^q",
+            "hash_mode": "argon2",
+            "strength": "strong",
+            "totp_secret": "A4QGPLS2J46KK6T2PIYGLWUFPN4U5O6S"
+        }
+    ]
+}

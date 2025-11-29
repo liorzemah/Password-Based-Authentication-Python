@@ -1,0 +1,309 @@
+[
+    {
+        "timestamp_readable": "2025-11-29 19:38:59",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_00"
+        ],
+        "hash_mode": "sha256",
+        "protections_active": [
+            "SALT"
+        ],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0093 s",
+        "time_to_first_success_s": "0.0093 s",
+        "attempts_per_second": "107.16",
+        "success_status": "Success",
+        "test_name": "BF_Basic_SHA256"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:39:10",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_20"
+        ],
+        "hash_mode": "argon2",
+        "protections_active": [
+            "SALT"
+        ],
+        "total_attempts": 21,
+        "time_to_completion_s": "3.2633 s",
+        "time_to_first_success_s": "3.2633 s",
+        "attempts_per_second": "6.44",
+        "success_status": "Success",
+        "test_name": "BF_Basic_Argon2"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:39:19",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_10"
+        ],
+        "hash_mode": "bcrypt",
+        "protections_active": [
+            "RATE_LIMITING",
+            "SALT"
+        ],
+        "total_attempts": 30,
+        "time_to_completion_s": "1.6187 s",
+        "time_to_first_success_s": "N/A",
+        "attempts_per_second": "18.53",
+        "success_status": "Failed to find (or Blocked)",
+        "test_name": "BF_with_Rate_Limiting"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:39:29",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_10"
+        ],
+        "hash_mode": "bcrypt",
+        "protections_active": [
+            "LOCKOUT",
+            "SALT"
+        ],
+        "total_attempts": 30,
+        "time_to_completion_s": "1.6803 s",
+        "time_to_first_success_s": "N/A",
+        "attempts_per_second": "17.85",
+        "success_status": "Failed to find (or Blocked)",
+        "test_name": "BF_with_Account_Lockout"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:39:41",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_10"
+        ],
+        "hash_mode": "bcrypt",
+        "protections_active": [
+            "PEPPER",
+            "SALT"
+        ],
+        "total_attempts": 10,
+        "time_to_completion_s": "3.5213 s",
+        "time_to_first_success_s": "N/A",
+        "attempts_per_second": "2.84",
+        "success_status": "Failed to find (or Blocked)",
+        "test_name": "BF_with_Pepper"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:39:48",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_00"
+        ],
+        "hash_mode": "sha256",
+        "protections_active": [
+            "TOTP",
+            "SALT"
+        ],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0149 s",
+        "time_to_first_success_s": "0.0149 s",
+        "attempts_per_second": "67.05",
+        "success_status": "Success",
+        "test_name": "BF_with_TOTP"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:39:56",
+        "attack_type": "Brute-Force",
+        "targets": [
+            "user_00"
+        ],
+        "hash_mode": "sha256",
+        "protections_active": [],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0083 s",
+        "time_to_first_success_s": "0.0083 s",
+        "attempts_per_second": "120.80",
+        "success_status": "Success",
+        "test_name": "BF_without_Salt"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:40:04",
+        "attack_type": "Password-Spraying",
+        "targets": [
+            "user_00",
+            "user_01",
+            "user_02",
+            "user_03",
+            "user_04",
+            "user_05",
+            "user_06",
+            "user_07",
+            "user_08",
+            "user_09",
+            "user_10",
+            "user_11",
+            "user_12",
+            "user_13",
+            "user_14",
+            "user_15",
+            "user_16",
+            "user_17",
+            "user_18",
+            "user_19",
+            "user_20",
+            "user_21",
+            "user_22",
+            "user_23",
+            "user_24",
+            "user_25",
+            "user_26",
+            "user_27",
+            "user_28",
+            "user_29"
+        ],
+        "hash_mode": "Mixed/Multiple",
+        "protections_active": [
+            "SALT"
+        ],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0087 s",
+        "time_to_first_success_s": "0.0086 s",
+        "attempts_per_second": "115.60",
+        "success_status": "Success",
+        "test_name": "PS_Basic"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:40:12",
+        "attack_type": "Password-Spraying",
+        "targets": [
+            "user_00",
+            "user_01",
+            "user_02",
+            "user_03",
+            "user_04",
+            "user_05",
+            "user_06",
+            "user_07",
+            "user_08",
+            "user_09",
+            "user_10",
+            "user_11",
+            "user_12",
+            "user_13",
+            "user_14",
+            "user_15",
+            "user_16",
+            "user_17",
+            "user_18",
+            "user_19",
+            "user_20",
+            "user_21",
+            "user_22",
+            "user_23",
+            "user_24",
+            "user_25",
+            "user_26",
+            "user_27",
+            "user_28",
+            "user_29"
+        ],
+        "hash_mode": "Mixed/Multiple",
+        "protections_active": [
+            "LOCKOUT",
+            "SALT"
+        ],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0084 s",
+        "time_to_first_success_s": "0.0084 s",
+        "attempts_per_second": "119.36",
+        "success_status": "Success",
+        "test_name": "PS_with_Account_Lockout"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:40:20",
+        "attack_type": "Password-Spraying",
+        "targets": [
+            "user_00",
+            "user_01",
+            "user_02",
+            "user_03",
+            "user_04",
+            "user_05",
+            "user_06",
+            "user_07",
+            "user_08",
+            "user_09",
+            "user_10",
+            "user_11",
+            "user_12",
+            "user_13",
+            "user_14",
+            "user_15",
+            "user_16",
+            "user_17",
+            "user_18",
+            "user_19",
+            "user_20",
+            "user_21",
+            "user_22",
+            "user_23",
+            "user_24",
+            "user_25",
+            "user_26",
+            "user_27",
+            "user_28",
+            "user_29"
+        ],
+        "hash_mode": "Mixed/Multiple",
+        "protections_active": [
+            "RATE_LIMITING",
+            "SALT"
+        ],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0076 s",
+        "time_to_first_success_s": "0.0076 s",
+        "attempts_per_second": "132.12",
+        "success_status": "Success",
+        "test_name": "PS_with_Rate_Limiting"
+    },
+    {
+        "timestamp_readable": "2025-11-29 19:40:28",
+        "attack_type": "Password-Spraying",
+        "targets": [
+            "user_00",
+            "user_01",
+            "user_02",
+            "user_03",
+            "user_04",
+            "user_05",
+            "user_06",
+            "user_07",
+            "user_08",
+            "user_09",
+            "user_10",
+            "user_11",
+            "user_12",
+            "user_13",
+            "user_14",
+            "user_15",
+            "user_16",
+            "user_17",
+            "user_18",
+            "user_19",
+            "user_20",
+            "user_21",
+            "user_22",
+            "user_23",
+            "user_24",
+            "user_25",
+            "user_26",
+            "user_27",
+            "user_28",
+            "user_29"
+        ],
+        "hash_mode": "Mixed/Multiple",
+        "protections_active": [
+            "SALT"
+        ],
+        "total_attempts": 1,
+        "time_to_completion_s": "0.0081 s",
+        "time_to_first_success_s": "0.0080 s",
+        "attempts_per_second": "124.21",
+        "success_status": "Success",
+        "test_name": "PS_Multi_Password"
+    }
+]
