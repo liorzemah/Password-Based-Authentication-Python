@@ -12,6 +12,8 @@ ATTACK_ENDPOINT = f"{SERVER_URL}/login"
 with open("data/users.json", "r") as f:
     passwords_data = json.load(f)
 
+CAPTCHA_TOKEN_INDEX = 3
+TOTP_PROTECTION_INDEX = 4
 WEAK_PASSWORDS = passwords_data["weak_passwords"]
 MEDIUM_PASSWORDS = passwords_data["medium_passwords"]
 STRONG_PASSWORDS = passwords_data["strong_passwords"]
@@ -27,7 +29,7 @@ except FileNotFoundError:
     REGISTERED_USERS_MAP = {}
 
 def get_captcha_token(protection_flags):
-    if len(protection_flags) > 3 and protection_flags[3] == '1':
+    if len(protection_flags) > CAPTCHA_TOKEN_INDEX and protection_flags[CAPTCHA_TOKEN_INDEX] == '1':
          try:
              captcha_response = requests.get(f"{SERVER_URL}/admin/get_captcha_token")
              return captcha_response.json().get("captcha_token")
@@ -93,7 +95,7 @@ def run_attack(attack_type, targets_data, password_list, protection_flags):
             
             if response.status_code == 200:
                 
-                if response_data.get("totp_required") and len(protection_flags) > 4 and protection_flags[4] == '1':
+                if response_data.get("totp_required") and len(protection_flags) > TOTP_PROTECTION_INDEX and protection_flags[TOTP_PROTECTION_INDEX] == '1':
                     
                     if verify_totp(username, password, captcha_token):
                         print(f"!!! SUCCESS !!! Password Found: '{password}' for {username} (TOTP Verified)")
