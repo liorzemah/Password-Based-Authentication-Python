@@ -26,3 +26,6 @@ Go to the main direction and just execute `python3 src/tests.py`.
 Then you can take a look at the results in the `logs` directory.
 In `logs/attempts.log` you can see all the login attempts to the web server.
 In `logs/attack_summary_results.json` you can see the result of each attack attempts.
+
+### Pay attention
+This code is only for a research and not used against real servers / users!

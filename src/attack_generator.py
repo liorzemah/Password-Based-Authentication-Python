@@ -69,6 +69,7 @@ def run_attack(attack_type, targets_data, password_list, protection_flags):
     attempts = 0
     success_time = None
     success_found = False
+    successful_password = None
 
     if attack_type == "Brute-Force":
         target_username = targets_data[0]['username']
@@ -101,6 +102,7 @@ def run_attack(attack_type, targets_data, password_list, protection_flags):
                         print(f"!!! SUCCESS !!! Password Found: '{password}' for {username} (TOTP Verified)")
                         success_time = time.time()
                         success_found = True
+                        successful_password = password
                         break
                     else:
                         pass
@@ -109,6 +111,7 @@ def run_attack(attack_type, targets_data, password_list, protection_flags):
                     print(f"!!! SUCCESS !!! Password Found: '{password}' for {username}")
                     success_time = time.time()
                     success_found = True
+                    successful_password = password
                     break
             
             elif response.status_code in [401, 403, 429]:
@@ -126,6 +129,16 @@ def run_attack(attack_type, targets_data, password_list, protection_flags):
     total_time = end_time - start_time
     time_to_first_success = success_time - start_time if success_time else None
     attempts_per_second = attempts / total_time if total_time > 0 else 0
+    average_latency_ms = (total_time / attempts) * 1000 if attempts > 0 else 0
+
+    successful_password_category = "N/A"
+    if success_found and successful_password:
+        if successful_password in WEAK_PASSWORDS:
+            successful_password_category = "Weak"
+        elif successful_password in MEDIUM_PASSWORDS:
+            successful_password_category = "Medium"
+        elif successful_password in STRONG_PASSWORDS:
+            successful_password_category = "Strong"
     
     time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -139,7 +152,9 @@ def run_attack(attack_type, targets_data, password_list, protection_flags):
         "time_to_completion_s": f"{total_time:.4f} s",
         "time_to_first_success_s": f"{time_to_first_success:.4f} s" if time_to_first_success is not None else "N/A",
         "attempts_per_second": f"{attempts_per_second:.2f}",
-        "success_status": "Success" if success_found else "Failed to find (or Blocked)"
+        "success_status": "Success" if success_found else "Failed to find (or Blocked)",
+        "average_latency_ms": f"{average_latency_ms:.2f}",
+        "successful_password_category": successful_password_category
     }
     
     return result_log
