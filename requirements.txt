@@ -1,0 +1,8 @@
+flask
+requests
+bcrypt
+argon2
+cffi
+pyotp
+tabulate
+psutil

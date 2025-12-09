@@ -17,8 +17,9 @@ GROUP_SEED xor value - 513626425
 ### Dependencies
 
 ```bash
-pip install flask requests bcrypt argon2-cffi pyotp tabulate
+pip install -r requirements.txt
 ```
+
 
 ### How to use
 
