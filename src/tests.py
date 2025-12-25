@@ -54,7 +54,7 @@ CONFIGS_TO_TEST = {
     },
     "BF_with_Pepper": {
         "attack_type": "Brute-Force",
-        "targets_data": [{"username": "user_19", "hash_mode": "bcrypt"}],
+        "targets_data": [{"username": "user_19", "hash_mode": "argon2"}],
         "password_list": POTENTIAL_PASSWORDS,
         "env": {"ENABLE_PEPPER": "1", "ENABLE_RATE_LIMITING": "0", "ENABLE_LOCKOUT": "0", "ENABLE_CAPTCHA": "0", "ENABLE_TOTP": "0", "ENABLE_SALT": "1"}
     },
@@ -64,11 +64,11 @@ CONFIGS_TO_TEST = {
         "password_list": POTENTIAL_PASSWORDS,
         "env": {"ENABLE_PEPPER": "0", "ENABLE_RATE_LIMITING": "0", "ENABLE_LOCKOUT": "0", "ENABLE_CAPTCHA": "0", "ENABLE_TOTP": "1", "ENABLE_SALT": "1"}
     },
-    "BF_without_Salt": {
+    "BF_with_all_features": {
         "attack_type": "Brute-Force",
-        "targets_data": [{"username": "user_08", "hash_mode": "sha256"}],
+        "targets_data": [{"username": "user_08", "hash_mode": "argon2"}],
         "password_list": POTENTIAL_PASSWORDS,
-        "env": {"ENABLE_PEPPER": "0", "ENABLE_RATE_LIMITING": "0", "ENABLE_LOCKOUT": "0", "ENABLE_CAPTCHA": "0", "ENABLE_TOTP": "0", "ENABLE_SALT": "0"}
+        "env": {"ENABLE_PEPPER": "1", "ENABLE_RATE_LIMITING": "1", "ENABLE_LOCKOUT": "1", "ENABLE_CAPTCHA": "1", "ENABLE_TOTP": "0", "ENABLE_SALT": "1"}
     },
     "PS_Basic": {
         "attack_type": "Password-Spraying",

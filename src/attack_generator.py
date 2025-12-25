@@ -123,8 +123,6 @@ def run_attack(attack_type, targets_data, password_list, protection_flags, local
             "local_benchmark": True,
             "total_hashes": len(password_list),
             "total_hash_time_s": f"{total_time_hashes:.4f} s",
-            "average_hash_time_ms": f"{avg_ms:.2f}",
-            "hashes_per_second": f"{hps:.2f}",
             "avg_cpu_percent": f"{avg_cpu_b:.2f}" if avg_cpu_b is not None else None,
             "avg_memory_mb": f"{avg_mem_b:.2f}" if avg_mem_b is not None else None,
             "peak_memory_mb": f"{peak_mem_b:.2f}" if peak_mem_b is not None else None,
