@@ -1,7 +1,7 @@
 {
     "results": [
         {
-            "timestamp_readable": "2025-12-09 09:48:57",
+            "timestamp_readable": "2025-12-25 20:34:05",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_20"
@@ -12,18 +12,16 @@
             ],
             "local_benchmark": true,
             "total_hashes": 30,
-            "total_hash_time_s": "0.0034 s",
-            "average_hash_time_ms": "0.00",
-            "hashes_per_second": "0.00",
-            "avg_cpu_percent": "3.00",
-            "avg_memory_mb": "29.74",
-            "peak_memory_mb": "29.74",
+            "total_hash_time_s": "0.0059 s",
+            "avg_cpu_percent": "1.21",
+            "avg_memory_mb": "29.80",
+            "peak_memory_mb": "29.80",
             "success_status": "N/A",
             "test_name": "BF_Basic_SHA256",
-            "attack_duration_sec": 0.0034
+            "attack_duration_sec": 0.0059
         },
         {
-            "timestamp_readable": "2025-12-09 09:49:09",
+            "timestamp_readable": "2025-12-25 20:34:16",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_20"
@@ -34,18 +32,16 @@
             ],
             "local_benchmark": true,
             "total_hashes": 30,
-            "total_hash_time_s": "4.5635 s",
-            "average_hash_time_ms": "0.00",
-            "hashes_per_second": "0.00",
-            "avg_cpu_percent": "64.59",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "total_hash_time_s": "4.1196 s",
+            "avg_cpu_percent": "68.64",
+            "avg_memory_mb": "29.82",
+            "peak_memory_mb": "29.83",
             "success_status": "N/A",
             "test_name": "BF_Basic_Argon2",
-            "attack_duration_sec": 4.5635
+            "attack_duration_sec": 4.1196
         },
         {
-            "timestamp_readable": "2025-12-09 09:49:25",
+            "timestamp_readable": "2025-12-25 20:34:32",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_20"
@@ -56,42 +52,16 @@
             ],
             "local_benchmark": true,
             "total_hashes": 30,
-            "total_hash_time_s": "8.1241 s",
-            "average_hash_time_ms": "0.00",
-            "hashes_per_second": "0.00",
-            "avg_cpu_percent": "53.87",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "total_hash_time_s": "8.0592 s",
+            "avg_cpu_percent": "52.19",
+            "avg_memory_mb": "29.84",
+            "peak_memory_mb": "29.84",
             "success_status": "N/A",
             "test_name": "BF_Basic_Bcrypt",
-            "attack_duration_sec": 8.1241
+            "attack_duration_sec": 8.0592
         },
         {
-            "timestamp_readable": "2025-12-09 09:49:34",
-            "attack_type": "Brute-Force",
-            "targets": [
-                "user_17"
-            ],
-            "hash_mode": "bcrypt",
-            "protections_active": [
-                "RATE_LIMITING",
-                "SALT"
-            ],
-            "total_attempts": 30,
-            "time_to_completion_s": "0.9342 s",
-            "time_to_first_success_s": "N/A",
-            "attempts_per_second": "32.11",
-            "success_status": "Failed to find (or Blocked)",
-            "average_latency_ms": "31.14",
-            "successful_password_category": "N/A",
-            "avg_cpu_percent": "73.62",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
-            "test_name": "BF_with_Rate_Limiting",
-            "attack_duration_sec": 0.9342
-        },
-        {
-            "timestamp_readable": "2025-12-09 09:49:42",
+            "timestamp_readable": "2025-12-25 20:34:52",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_18"
@@ -102,44 +72,44 @@
                 "SALT"
             ],
             "total_attempts": 30,
-            "time_to_completion_s": "0.1767 s",
+            "time_to_completion_s": "0.1409 s",
             "time_to_first_success_s": "N/A",
-            "attempts_per_second": "169.76",
+            "attempts_per_second": "212.99",
             "success_status": "Failed to find (or Blocked)",
-            "average_latency_ms": "5.89",
+            "average_latency_ms": "4.70",
             "successful_password_category": "N/A",
-            "avg_cpu_percent": "61.67",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "avg_cpu_percent": "38.58",
+            "avg_memory_mb": "29.89",
+            "peak_memory_mb": "29.89",
             "test_name": "BF_with_Account_Lockout",
-            "attack_duration_sec": 0.1767
+            "attack_duration_sec": 0.1409
         },
         {
-            "timestamp_readable": "2025-12-09 09:49:58",
+            "timestamp_readable": "2025-12-25 20:35:05",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_19"
             ],
-            "hash_mode": "bcrypt",
+            "hash_mode": "argon2",
             "protections_active": [
                 "PEPPER",
                 "SALT"
             ],
             "total_attempts": 20,
-            "time_to_completion_s": "7.0529 s",
-            "time_to_first_success_s": "7.0529 s",
-            "attempts_per_second": "2.84",
+            "time_to_completion_s": "5.9429 s",
+            "time_to_first_success_s": "5.9429 s",
+            "attempts_per_second": "3.37",
             "success_status": "Success",
-            "average_latency_ms": "352.64",
+            "average_latency_ms": "297.14",
             "successful_password_category": "Medium",
-            "avg_cpu_percent": "77.83",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "avg_cpu_percent": "64.62",
+            "avg_memory_mb": "29.90",
+            "peak_memory_mb": "29.90",
             "test_name": "BF_with_Pepper",
-            "attack_duration_sec": 7.0529
+            "attack_duration_sec": 5.9429
         },
         {
-            "timestamp_readable": "2025-12-09 09:50:05",
+            "timestamp_readable": "2025-12-25 20:35:13",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_09"
@@ -150,41 +120,47 @@
                 "SALT"
             ],
             "total_attempts": 10,
-            "time_to_completion_s": "0.0557 s",
-            "time_to_first_success_s": "0.0557 s",
-            "attempts_per_second": "179.61",
+            "time_to_completion_s": "0.0598 s",
+            "time_to_first_success_s": "0.0598 s",
+            "attempts_per_second": "167.19",
             "success_status": "Success",
-            "average_latency_ms": "5.57",
+            "average_latency_ms": "5.98",
             "successful_password_category": "Weak",
-            "avg_cpu_percent": "45.59",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "avg_cpu_percent": "63.97",
+            "avg_memory_mb": "29.90",
+            "peak_memory_mb": "29.90",
             "test_name": "BF_with_TOTP",
-            "attack_duration_sec": 0.0557
+            "attack_duration_sec": 0.0598
         },
         {
-            "timestamp_readable": "2025-12-09 09:50:14",
+            "timestamp_readable": "2025-12-25 20:35:21",
             "attack_type": "Brute-Force",
             "targets": [
                 "user_08"
             ],
-            "hash_mode": "sha256",
-            "protections_active": [],
-            "total_attempts": 9,
-            "time_to_completion_s": "1.2688 s",
-            "time_to_first_success_s": "1.2688 s",
-            "attempts_per_second": "7.09",
-            "success_status": "Success",
-            "average_latency_ms": "140.97",
-            "successful_password_category": "Weak",
-            "avg_cpu_percent": "53.40",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
-            "test_name": "BF_without_Salt",
-            "attack_duration_sec": 1.2688
+            "hash_mode": "argon2",
+            "protections_active": [
+                "PEPPER",
+                "RATE_LIMITING",
+                "LOCKOUT",
+                "CAPTCHA",
+                "SALT"
+            ],
+            "total_attempts": 30,
+            "time_to_completion_s": "0.9675 s",
+            "time_to_first_success_s": "N/A",
+            "attempts_per_second": "31.01",
+            "success_status": "Failed to find (or Blocked)",
+            "average_latency_ms": "32.25",
+            "successful_password_category": "N/A",
+            "avg_cpu_percent": "64.39",
+            "avg_memory_mb": "29.93",
+            "peak_memory_mb": "29.93",
+            "test_name": "BF_with_all_features",
+            "attack_duration_sec": 0.9675
         },
         {
-            "timestamp_readable": "2025-12-09 09:50:21",
+            "timestamp_readable": "2025-12-25 20:35:29",
             "attack_type": "Password-Spraying",
             "targets": [
                 "user_00",
@@ -223,20 +199,20 @@
                 "SALT"
             ],
             "total_attempts": 1,
-            "time_to_completion_s": "0.0045 s",
-            "time_to_first_success_s": "0.0045 s",
-            "attempts_per_second": "221.41",
+            "time_to_completion_s": "0.0046 s",
+            "time_to_first_success_s": "0.0046 s",
+            "attempts_per_second": "216.91",
             "success_status": "Success",
-            "average_latency_ms": "4.52",
+            "average_latency_ms": "4.61",
             "successful_password_category": "Weak",
-            "avg_cpu_percent": "33.00",
-            "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "avg_cpu_percent": "40.10",
+            "avg_memory_mb": "29.93",
+            "peak_memory_mb": "29.93",
             "test_name": "PS_Basic",
-            "attack_duration_sec": 0.0045
+            "attack_duration_sec": 0.0046
         },
         {
-            "timestamp_readable": "2025-12-09 09:50:29",
+            "timestamp_readable": "2025-12-25 20:35:36",
             "attack_type": "Password-Spraying",
             "targets": [
                 "user_00",
@@ -276,20 +252,20 @@
                 "SALT"
             ],
             "total_attempts": 1,
-            "time_to_completion_s": "0.0046 s",
-            "time_to_first_success_s": "0.0046 s",
-            "attempts_per_second": "219.06",
+            "time_to_completion_s": "0.0043 s",
+            "time_to_first_success_s": "0.0043 s",
+            "attempts_per_second": "231.68",
             "success_status": "Success",
-            "average_latency_ms": "4.57",
+            "average_latency_ms": "4.32",
             "successful_password_category": "Weak",
-            "avg_cpu_percent": "33.30",
+            "avg_cpu_percent": "38.80",
             "avg_memory_mb": "29.95",
             "peak_memory_mb": "29.95",
             "test_name": "PS_with_Account_Lockout",
-            "attack_duration_sec": 0.0046
+            "attack_duration_sec": 0.0043
         },
         {
-            "timestamp_readable": "2025-12-09 09:50:36",
+            "timestamp_readable": "2025-12-25 20:35:44",
             "attack_type": "Password-Spraying",
             "targets": [
                 "user_00",
@@ -329,20 +305,20 @@
                 "SALT"
             ],
             "total_attempts": 1,
-            "time_to_completion_s": "0.0044 s",
-            "time_to_first_success_s": "0.0044 s",
-            "attempts_per_second": "228.55",
+            "time_to_completion_s": "0.0045 s",
+            "time_to_first_success_s": "0.0045 s",
+            "attempts_per_second": "220.13",
             "success_status": "Success",
-            "average_latency_ms": "4.38",
+            "average_latency_ms": "4.54",
             "successful_password_category": "Weak",
-            "avg_cpu_percent": "35.30",
+            "avg_cpu_percent": "39.40",
             "avg_memory_mb": "29.95",
             "peak_memory_mb": "29.95",
             "test_name": "PS_with_Rate_Limiting",
-            "attack_duration_sec": 0.0044
+            "attack_duration_sec": 0.0045
         },
         {
-            "timestamp_readable": "2025-12-09 09:50:45",
+            "timestamp_readable": "2025-12-25 20:35:53",
             "attack_type": "Password-Spraying",
             "targets": [
                 "user_00",
@@ -385,40 +361,38 @@
                 "SALT"
             ],
             "total_attempts": 10,
-            "time_to_completion_s": "1.3576 s",
-            "time_to_first_success_s": "1.3576 s",
-            "attempts_per_second": "7.37",
+            "time_to_completion_s": "1.6065 s",
+            "time_to_first_success_s": "1.6065 s",
+            "attempts_per_second": "6.22",
             "success_status": "Success",
-            "average_latency_ms": "135.76",
+            "average_latency_ms": "160.65",
             "successful_password_category": "Weak",
-            "avg_cpu_percent": "68.64",
+            "avg_cpu_percent": "59.01",
             "avg_memory_mb": "29.95",
-            "peak_memory_mb": "29.95",
+            "peak_memory_mb": "29.96",
             "test_name": "PS_Multi_Password",
-            "attack_duration_sec": 1.3576
+            "attack_duration_sec": 1.6065
         }
     ],
     "attack_duration_analysis": {
-        "count": 12,
-        "average_attack_time_s": 1.9625333333333335,
-        "median_attack_time_s": 0.55545,
-        "p90_attack_time_s": 7.0529,
-        "min_attack_time_s": 0.0034,
-        "max_attack_time_s": 8.1241,
-        "stdev_attack_time_s": 2.9343040836204275,
+        "count": 11,
+        "average_attack_time_s": 1.9014272727272727,
+        "median_attack_time_s": 0.1409,
+        "min_attack_time_s": 0.0043,
+        "max_attack_time_s": 8.0592,
+        "stdev_attack_time_s": 2.84623626675331,
         "durations_sorted_s": [
-            0.0034,
-            0.0044,
+            0.0043,
             0.0045,
             0.0046,
-            0.0557,
-            0.1767,
-            0.9342,
-            1.2688,
-            1.3576,
-            4.5635,
-            7.0529,
-            8.1241
+            0.0059,
+            0.0598,
+            0.1409,
+            0.9675,
+            1.6065,
+            4.1196,
+            5.9429,
+            8.0592
         ]
     }
 }
